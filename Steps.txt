@@ -1,0 +1,23 @@
+1.Enable SPI in Raspberry Pi
+	//command:sudo raspi-config
+	Enter Interface Option
+	Enable SPI
+2.Install MCP3008 in raspberry
+//Command
+	sudo apt-get update
+	sudo apt-get install build-essential python-dev python-smbus git
+	cd ~
+	git clone https://github.com/adafruit/Adafruit_Python_MCP3008.git
+	cd Adafruit_Python_MCP3008
+	sudo python setup.py install
+3.Run the Simpletest.py 
+//Command
+	cd ~/Adafruit_Python_MCP3008/examples
+	nano simpletest.py
+4.Changes
+	i)Make Software SPI configuration as Comments(Ref org.png)
+	ii)uncomment the Hardware SPI configuration code(ref chg.png)
+5.Check the Connections (ref ACS712 with Raspberry.png)
+5.Run the simpletest file for getting output of ACS712 in the Channel 0
+
+	
